@@ -1,0 +1,15 @@
+node.js 설치후
+npm으로 react를 설치해서 사용했습니다
+npx로 한번만 깔아서 사용하는 것도 가능합니다.
+
+npm start // npm run start
+: 개발모드로 프로그램을 실행합니다.
+: HMR(Hot Module Replacement)가 동작해 수정과 동시에 화면이 변경됩니다
+: 개발 모드에서 코드의 에러는 브라우저에서 메시지를 출력합니다.
+: https 옵션을 통해 https인증서 없이도 임시로 https형태로 url을 만들 수 있습니다.
+    = set HTTPS=true &&  npm start
+
+npm run build
+: 배포 환경에서 사용할 파일을 만듭니다.
+: 압출 형태로 제공됩니다
+: 불필요한 공백 같은게 제거되어서 보기에는 안좋지만 크기가 줄어든다.
