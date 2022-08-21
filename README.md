@@ -1,1 +1,1 @@
-소스트리로 react-app-study 를 관리한다.
+소스트리로 commit하는 법을 배운다.
