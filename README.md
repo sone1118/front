@@ -4,4 +4,5 @@ html, scss, javascript 로 animation
 2. rt_figure
 3. waves
 4. gradation
+5. radial_menu
 5. sheep (구현중)
