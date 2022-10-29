@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #673ab7;
+}
+
+.circle {
+    transform-style: preserve-3d;
+    perspective: 1000px; 
+    animation: spin 8s linear infinite;
+}
+@keyframes spin 
+{
+    0%
+    {
+        transform: rotateY(360deg);
+    }
+}
+
+.circle .char{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4em;
+    background: #fff;
+    border-top: 4px solid #35146f;
+    border-bottom: 4px solid #35146f;
+    padding: 5px 12px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index) * 72deg)) translateZ(280px);
+
+    /* transform: rotateY(45deg); */
+}
+
