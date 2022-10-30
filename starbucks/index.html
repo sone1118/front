@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="../image/logo.png" class="logo" alt="logo" ></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's new</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis blanditiis nobis sed architecto sit. Quidem laudantium voluptatibus eius et iste libero magnam beatae placeat, natus similique nam omnis aut aperiam.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="../image/img1.png" class="starbucks"alt="beverage1">
+            </div>
+            <div class="thumbs">
+                <ul>
+                    <li><img src="../image/thumb1.png" alt="beverage1" onclick="onClick('img1.png');changeCircleColor('#017143')"></li>
+                    <li><img src="../image/thumb2.png" alt="beverage2" onclick="onClick('img2.png');changeCircleColor('#eb7495')"></li>
+                    <li><img src="../image/thumb3.png" alt="beverage3" onclick="onClick('img3.png');changeCircleColor('#d752b1')"></li>
+                </ul>
+            </div>
+            <div class="sci">
+                <ul>
+                    <li><a href="#"><img src="../image/facebook.png" alt="facebook"></a></li>
+                    <li><a href="#"><img src="../image/twitter.png" alt="twitter"></a></li>
+                    <li><a href="#"><img src="../image/instagram.png" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        const onClick = function(change_img) {
+            const starbucks = document.querySelector('.starbucks');
+            const index = starbucks.src.lastIndexOf('/');
+            const new_src = starbucks.src.slice(0, index + 1) + change_img;
+            starbucks.src = new_src;
+        }
+        const changeCircleColor = function(color) {   
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        
+    </script>
+</body>
+</html>
