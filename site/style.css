@@ -13,7 +13,13 @@
     0% {transform: rotate(0deg);}
     100% {transform: rotate(-360deg);}
 }
-.circle-spin {
+.wrapper .circle{
+    width: 100px;
+    height: 100px;
+    border: 15px solid #666;
+    border-radius: 50%;
+}
+.wrapper .spin {
     margin: 0 auto;
     width: 100px;
     height: 100px;
@@ -22,23 +28,21 @@
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
-.circle{
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-    border: 15px solid #666;
-    border-radius: 50%;
-}
-.circle-text {
+
+.circle .text {
     font-size: 20px;
     font-weight: 900;
     text-align: center;
     line-height: 100px;
 }
-.circle .circle-text {
+.circle .on {
+    color: #e36;
+    animation: spinReverse 1s linear infinite;
+}
+/* .circle .circle-text {
     color: #666;
 }
 .circle-spin .circle-text {
     color: #e36;
     animation: spinReverse 1s linear infinite;
-}
+} */

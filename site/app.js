@@ -1,13 +1,24 @@
 const circle = document.querySelector(".wrapper .circle");
+   
+const handleCircleClick = function() {
+     const text = document.querySelector(".circle .text");
+    // const newName = "spin";
+    // const newText = "on";
 
-const handleWindowOffline = function() {
-    circle.className = "circle-spin";
-    document.querySelector(".wrapper .circle-spin .circle-text").innerHTML = "OFF";
+    // if(circle.classList.contains(newName)) {
+    //     circle.classList.remove(newName);
+    //     text.classList.remove(newText);
+    //     text.innerHTML = "ON";
+    // }else {
+    //     circle.classList.add(newName);
+    //     text.classList.add(newText);
+    //     text.innerHTML = "OFF";
+    // }
+    
+    circle.classList.toggle("spin");
+    text.classList.toggle("on");
+    text.innerHTML = (text.innerHTML === "ON")? "OFF" : "ON";
 };
 
-const handleWindowOnline = function() {
-    circle.className = "circle";
-    document.querySelector(".wrapper .circle .circle-text").innerHTML = "WIFI ON"
-};
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+circle.addEventListener("click", handleCircleClick);
+
