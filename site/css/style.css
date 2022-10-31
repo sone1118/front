@@ -1,3 +1,39 @@
+body {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    color:#fff;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.bgImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    animation: fadeIn 0.3s linear;
+}
 .hidden {
     display: none;
+}
+div .glyphicon-trash {
+    display: inline-block;
+    padding-left: 10px;
+}
+div .glyphicon-trash:hover {
+    color: black;
 }

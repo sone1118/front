@@ -19,8 +19,10 @@ function paintTodo(newTodoObj) {
     newList.id = newTodoObj.id;
     const newSpan = document.createElement("span");
     newSpan.innerText = newTodoObj.text;
-    const newButton = document.createElement("button");
-    newButton.InnerHTML = "X";
+
+    const newButton = document.createElement("div");
+    newButton.classList.add("glyphicon");
+    newButton.classList.add("glyphicon-trash");
     newButton.addEventListener("click", deleteTodo);
     newList.appendChild(newSpan);
     newList.appendChild(newButton);
