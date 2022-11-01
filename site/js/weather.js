@@ -5,22 +5,19 @@ function onGeoOk(position) {
     // const lon = position.coords.longitude;
     // const url = `https://pro.openweathermap.org/data/2.5/forecast/climate?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
     const url = `http://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=${API_KEY}&units=metric`; 
-    console.log(url);
-    //이친구는promise임
+
     fetch(url)
     .then((response)=> response.json())
     .then((data) => {
-        const weather = document.querySelector("#weather span:first-child");
-        const city = document.querySelector("#weather span:last-child");
-        console.log(data.name);
-        weather.innerText = `${data.weather[0].main} / ${Math.floor(data.main.temp)}`;
-        city.innerText = data.name;
+        const weather = document.querySelector("#weather span:nth-child(2)");
+        const temp = document.querySelector("#weather span:last-child");
+        weather.innerText = data.weather[0].main;
+        temp.innerText = `${Math.floor(data.main.temp)}°C`;
     })
     .catch((error) => {
-        const weather = document.querySelector("#weather span:first-child");
+        const weather = document.querySelector("#weather span:nth-child(2)");
         const city = document.querySelector("#weather span:last-child");
         weather.innerText = "No sign";
-        city.innerText = "No sign";
         console.log(error);
     });
 }
