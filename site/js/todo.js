@@ -17,6 +17,8 @@ function deleteTodo(e) {
 function paintTodo(newTodoObj) {
     const newList = document.createElement("li");
     newList.id = newTodoObj.id;
+    newList.style = "background: transparent;"
+    newList.classList.add("list-group-item");
     const newSpan = document.createElement("span");
     newSpan.innerText = newTodoObj.text;
 

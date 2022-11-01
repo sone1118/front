@@ -9,35 +9,114 @@
     <title>Site</title>
 </head>
 <body>
-    <div class="wrapper">
-        <form id="form1" class="hidden">
-            <input 
-            class="name"
-            required 
-            maxlength="15" 
-            type="text" 
-            placeholder="What is your name?"
-            />
-            <input type="submit" value="Login"/>
-        </form>
-        <h2 id="clock">00:00</h2>
-        <h1 id="greeting" class="hidden"></h1>
-        <form id="todo-form">
-            <input type="text" 
-            required 
-            placeholder="Write todo and Press Enter"
-            />
-        </form>
-        <ul id="todo-list"></ul>
-        <div id="quote">
-            <span></span>
-            <span></span>
+    <div class="container">
+        <div class="row h-70">
+           <div class="col-sm-6">
+                <div class="wrapper">
+                    <h2 id="clock">00:00</h2>
+                    
+                    <div id="weather">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <form id="form1" class="hidden">
+                        <input 
+                        class="name"
+                        required 
+                        maxlength="15" 
+                        type="text" 
+                        placeholder="What is your name?"
+                        />
+                        <input type="submit" value="Login"/>
+                    </form>
+
+                    <h1 id="greeting" class="hidden"></h1>
+
+                </div>
+           </div>
+           
+           <div class="col-sm-6">
+                <div class="wrapper">
+                    <form id="todo-form">
+                        <input type="text" 
+                        required 
+                        placeholder="Write todo and Press Enter"
+                        />
+                    </form>
+                    
+                    <div id="panel1" class="panel panel-default">
+                        <div id="panel-heading" class="panel-heading">Todo List</div>
+                        <ul id="todo-list" class="list-group overflow-auto"></ul>
+                    </div>
+                </div>
+           </div>
         </div>
-        <div id="weather">
-            <span></span>
-            <span></span>
+
+
+        <div class="row h-10">
+            <div class="col-sm-12">
+                <!-- 명언 -->
+                <figure id="quote">
+                    <blockquote><p></p></blockquote>
+                    <figcaption></figcaption>
+                </figure>
+            </div>
         </div>
-    </div>
+
+<!-- 
+
+
+        <div class="row">
+            <form id="form1" class="hidden">
+                <input 
+                class="name"
+                required 
+                maxlength="15" 
+                type="text" 
+                placeholder="What is your name?"
+                />
+                <input type="submit" value="Login"/>
+            </form>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                <h2 id="clock">00:00</h2>
+                
+                <div id="weather">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <h1 id="greeting" class="hidden"></h1>
+
+                <form id="todo-form">
+                    <input type="text" 
+                    required 
+                    placeholder="Write todo and Press Enter"
+                    />
+                </form>
+    
+                <div id="panel1" class="panel panel-default">
+                    <div class="panel-heading" style="background: transparent;">Todo List</div>
+                    <ul id="todo-list" class="list-group">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div id="quote">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
  
 </body>
 <script type="text/javascript" src="./js/greeting.js"></script>

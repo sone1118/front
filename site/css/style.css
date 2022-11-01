@@ -1,15 +1,27 @@
 body {
+    display: flex;
+    justify-content: center;
     background-color: #fff;
-    width: 100%;
-    height: 100%;
+    width: 100;
+    height: 100;
     margin: 0;
     color:#fff;
 }
+.container {
+    padding-top: 20px;
+    height: 100vh;
+    mix-blend-mode: difference;
+    /* display: flex;
+    flex-direction: column;
+    text-align: center; */
+}
 .wrapper {
+    height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -18,15 +30,15 @@ body {
       opacity: 1;
     }
   }
-.bgImage {
+/* .bgImage {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     animation: fadeIn 0.3s linear;
-}
+} */
 .hidden {
     display: none;
 }
@@ -34,6 +46,75 @@ div .glyphicon-trash {
     display: inline-block;
     padding-left: 10px;
 }
-div .glyphicon-trash:hover {
-    color: black;
+#greeting {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+/* .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+/* #panel1 {
+    background: transparent;
+    font-weight: 300;
+    width: 30em;
+    justify-content: center;
+}
+#panel1 .panel-heading{
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+} */
+#clock {
+    font-size: 70px;
+    font-weight: 700;
+}
+.col {
+    padding: 10px 0;
+}
+.row {
+    text-align: center;
+}
+
+.panel {
+    margin: 5px 0;
+    text-align: left;
+    background-color:rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 80%;
+    height: 80%;
+}
+#todo-list {
+    height: 80%;
+    overflow: hidden;
+
+}
+#todo-list li{
+    display: flex;
+    justify-content: space-between;
+    word-break: break-all;
+    border: none;
+}
+#todo-list:hover {
+    height: 90%;
+    overflow: auto;
+}
+#todo-form input{
+    background-color:rgba(0, 0, 0, 0.5);
+    color: #888;
+}
+#panel-heading {
+    text-align: center;
+    color: #fff;
+    background: transparent;
+}
+#quote {
+    height: 10vh;
+    font-size: 0.5em;
+    padding-bottom: 10px;
+}
+
+#quote blockquote {
+    font-size: 2em;
 }
