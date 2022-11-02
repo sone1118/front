@@ -26,4 +26,11 @@ function onGeoError() {
     console.log("Can't find you. No Weather for you");
 }
 
+function handleLogout() {
+    localStorage.clear();
+    window.location.reload();
+}
+
+const logOut = document.querySelector("#weather .glyphicon-log-out");
+logOut.addEventListener("click", handleLogout);
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

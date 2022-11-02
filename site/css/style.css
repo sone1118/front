@@ -26,7 +26,7 @@ body {
     height: 100;
     margin: 0;
     color:#fff;
-    /* animation: fadeIn 1s linear; */
+    animation: fadeIn .4s linear;
 }
 .container {
     padding-top: 20px;
@@ -60,7 +60,7 @@ div .glyphicon-trash {
     padding-left: 10px;
     color:rgb(248, 184, 184);
 }
-div .glyphicon-trash:hover, div .glyphicon-ok-circle:hover{
+.glyphicon-trash:hover, .glyphicon-ok-circle:hover, .glyphicon-log-out:hover{
     opacity: 0.2;
 }
 
@@ -143,15 +143,21 @@ div .glyphicon-ok-circle {
 .bi{
     font-size: 3em;
 }
+#weather {
+    display: flex;
+    justify-content: space-between;
+}
 #weather span {
     color:rgb(249, 232, 163);
+    font-size: 2em;
+}
+#weather .glyphicon-log-out {
     font-size: 2em;
 }
 
 #analog {
     width: 23em;
     height: 23em;
-    /* mix-blend-mode: difference; */
     background-image: url("../img/analog_clock.png");
     background-repeat : no-repeat;
     background-size : cover;

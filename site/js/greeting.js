@@ -5,6 +5,10 @@ const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "userName";
 const APPEAR = "appear";
 
+function handleLogout() {
+
+}
+
 function showGreeting(userName) {
     greeting.innerText = `Hello ${userName}`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
@@ -14,11 +18,13 @@ function showItems() {
     const left = document.querySelector("#left");
     const quote = document.querySelector("#quote");
     const analog = document.querySelector("#analog");
+    const weather = document.querySelector("#weather");
     left.classList.remove("col-md-12");
     left.classList.add("col-md-6");
     right.classList.toggle(HIDDEN_CLASSNAME);
     quote.classList.toggle(HIDDEN_CLASSNAME);
     analog.classList.toggle(HIDDEN_CLASSNAME);
+    weather.classList.toggle(HIDDEN_CLASSNAME);
     analog.classList.add(APPEAR);
     left.classList.add(APPEAR);
     right.classList.add(APPEAR);
@@ -40,6 +46,7 @@ if(savedUserName === null) {
     //로그인 보여줌
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginForm.addEventListener("submit", onSubmit);
+
 } else {
     //바로 h1창 보여준다
     showGreeting(savedUserName);
