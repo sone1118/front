@@ -13,10 +13,13 @@ function showItems() {
     const right = document.querySelector("#right");
     const left = document.querySelector("#left");
     const quote = document.querySelector("#quote");
-    left.classList.remove("col-sm-12");
-    left.classList.add("col-sm-6");
+    const analog = document.querySelector("#analog");
+    left.classList.remove("col-md-12");
+    left.classList.add("col-md-6");
     right.classList.toggle(HIDDEN_CLASSNAME);
     quote.classList.toggle(HIDDEN_CLASSNAME);
+    analog.classList.toggle(HIDDEN_CLASSNAME);
+    analog.classList.add(APPEAR);
     left.classList.add(APPEAR);
     right.classList.add(APPEAR);
     quote.classList.add(APPEAR);

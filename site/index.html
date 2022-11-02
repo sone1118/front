@@ -17,8 +17,9 @@
             <span></span>
         </div>
         <div class="row">
-           <div id="left" class="col-sm-12">
+           <div id="left" class="col-md-12">
                 <div class="wrapper">
+
                     <form id="form1" class="hidden">
                         <input 
                         class="name"
@@ -30,14 +31,25 @@
                         <input class="submit" type="submit" value="Login"/>
                     </form>
                     <h1 id="greeting" class="hidden"></h1>
-                    <h2 id="clock">00:00</h2>     
+                    <h2 id="clock">00:00</h2>  
+                    <div id="analog" class="analog hidden">
+                        <div class="hour">
+                            <div id="hr" class="hr"></div>
+                        </div>
+                        <div class="minute">
+                            <div id="mn" class="mn"></div>
+                        </div>
+                        <div class="second">
+                            <div id="sc" class="sc"></div>
+                        </div>
+                    </div>   
                     <figure id="quote" class="hidden">
                         <blockquote><p></p></blockquote>
                         <figcaption></figcaption>
                     </figure>
                 </div>
            </div>           
-           <div id="right" class="col-sm-6 hidden">
+           <div id="right" class="col-md-6 hidden">
                 <div class="wrapper">
                     <form id="todo-form">
                         <input type="text" 
@@ -59,4 +71,5 @@
 <script type="text/javascript" src="./js/background.js"></script>
 <script type="text/javascript" src="./js/todo.js"></script>
 <script type="text/javascript" src="./js/weather.js"></script>
+<script type="text/javascript" src="./js/analogClock.js"></script>
 </html>

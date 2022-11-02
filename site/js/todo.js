@@ -4,16 +4,25 @@ const todoList = document.querySelector("#todo-list");
 let todos = [];
 const TODOS_KEY = "todos";
 
+function handleCheck(e) {
+    const parentList = e.target.parentElement.parentElement;
+    parentList.classList.toggle("checked");
+    todos = todos.map((ele) => ele.id === parseInt(parentList.id) ? {...ele, checked: !ele.checked} : ele);
+    saveTodos();
+}
+
 function saveTodos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(todos));
 }
+
 function deleteTodo(e) {
-    const list = e.target.parentElement;
+    const list = e.target.parentElement.parentElement;
     todos = todos.filter(item => item.id !== parseInt(list.id));
     console.log(todos);
     saveTodos();
     list.remove();
 }
+
 function paintTodo(newTodoObj) {
     const newList = document.createElement("li");
     newList.id = newTodoObj.id;
@@ -22,12 +31,24 @@ function paintTodo(newTodoObj) {
     const newSpan = document.createElement("span");
     newSpan.innerText = newTodoObj.text;
 
-    const newButton = document.createElement("div");
-    newButton.classList.add("glyphicon");
-    newButton.classList.add("glyphicon-trash");
-    newButton.addEventListener("click", deleteTodo);
+    if(newTodoObj.checked) newList.classList.add("checked");
+
+    const buttons = document.createElement("div");
+    const deleteButton = document.createElement("div");
+    const checkButton = document.createElement("div");
+
+    checkButton.classList.add("glyphicon");
+    checkButton.classList.add("glyphicon-ok-circle");
+    deleteButton.classList.add("glyphicon");
+    deleteButton.classList.add("glyphicon-trash");
+
+    deleteButton.addEventListener("click", deleteTodo);
+    checkButton.addEventListener("click", handleCheck);
+
+    buttons.appendChild(checkButton);
+    buttons.appendChild(deleteButton);
     newList.appendChild(newSpan);
-    newList.appendChild(newButton);
+    newList.appendChild(buttons);
     todoList.appendChild(newList);
 }
 function handleTodoSubmit(e) {
@@ -37,6 +58,7 @@ function handleTodoSubmit(e) {
     const newTodoObj = {
         text: newTodo,
         id: Date.now(),
+        checked: false,
     };
     todos.push(newTodoObj);
     paintTodo(newTodoObj);
